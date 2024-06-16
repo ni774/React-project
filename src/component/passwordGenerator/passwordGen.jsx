@@ -37,7 +37,7 @@ function PasswordGen() {
     passwordRef.current?.select();
     // if select in range if needed
     //? passwordRef.current?.setSelectionRange(0,5); 
-    window.navigator.clipboard.writeText(password);
+    window.navigator.clipboard.writeText(password); // this will copy
   }
 
   function changeColor(colour){
@@ -67,7 +67,7 @@ function PasswordGen() {
           className='outline-none bg-slate-500 w-full py-1 px-3'
           placeholder='Password'
           readOnly
-          ref={passwordRef}
+          ref={passwordRef}  //give reference to this
         />
         <button className='outline-none bg-blue-500 text-white px-3 py-0.5 shrink-0 active:bg-slate-400'
           onClick={copyPasswordToClipboard}
